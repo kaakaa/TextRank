@@ -36,7 +36,7 @@ This is the most basic and simplest usage of textrank.
 	import (
 		"fmt"
 
-		"github.com/DavidBelicza/TextRank"
+		"github.com/kaakaa/TextRank"
 	)
 
 	func main() {
@@ -74,7 +74,7 @@ textrank package what contains logic to retrieve those data from the graph.
 	import (
 		"fmt"
 
-		"github.com/DavidBelicza/TextRank"
+		"github.com/kaakaa/TextRank"
 	)
 
 	func main() {
@@ -134,7 +134,7 @@ allows access to the graph and every data can be retrieved from this structure.
 	import (
 		"fmt"
 
-		"github.com/DavidBelicza/TextRank"
+		"github.com/kaakaa/TextRank"
 	)
 
 	func main() {
@@ -185,7 +185,7 @@ weights and all related data.
 	import (
 		"fmt"
 
-		"github.com/DavidBelicza/TextRank"
+		"github.com/kaakaa/TextRank"
 	)
 
 	func main() {
@@ -233,7 +233,7 @@ algorithm by Algorithm interface and use it instead of defaults.
 	import (
 		"fmt"
 
-		"github.com/DavidBelicza/TextRank"
+		"github.com/kaakaa/TextRank"
 	)
 
 	func main() {
@@ -271,7 +271,7 @@ processes.
 	import (
 		"fmt"
 
-		"github.com/DavidBelicza/TextRank"
+		"github.com/kaakaa/TextRank"
 	)
 
 	func main() {
@@ -329,7 +329,7 @@ https://github.com/stopwords-iso
 	import (
 		"fmt"
 
-		"github.com/DavidBelicza/TextRank"
+		"github.com/kaakaa/TextRank"
 	)
 
 	func main() {
@@ -374,7 +374,7 @@ be extended by more text also in the same time.
 		"fmt"
 		"time"
 
-		"github.com/DavidBelicza/TextRank"
+		"github.com/kaakaa/TextRank"
 	)
 
 	func main() {

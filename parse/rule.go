@@ -1,10 +1,14 @@
 package parse
 
+import "strings"
+
 // Rule interface and its methods make possible the polimorf usage of process
 // how Rule retrieve tokens from text.
 type Rule interface {
 	IsWordSeparator(rune rune) bool
 	IsSentenceSeparator(rune rune) bool
+	findSentences(rawText string) Text
+	findWords(rawSentence string) (words []string)
 }
 
 // RuleDefault struct implements the Rule interface. It contains the separator
@@ -49,4 +53,49 @@ func (r *RuleDefault) IsSentenceSeparator(rune rune) bool {
 	}
 
 	return false
+}
+
+func (rule *RuleDefault) findSentences(rawText string) Text {
+	text := Text{}
+
+	var sentence string
+
+	for _, chr := range rawText {
+		if !rule.IsSentenceSeparator(chr) {
+			sentence = sentence + string(chr)
+		} else if len(sentence) > 0 {
+			sentence = sentence + string(chr)
+
+			text.Append(sentence, rule.findWords(sentence))
+
+			sentence = ""
+		}
+	}
+
+	if len(sentence) > 0 {
+		text.Append(sentence, rule.findWords(sentence))
+	}
+
+	return text
+}
+
+func (rule *RuleDefault) findWords(rawSentence string) (words []string) {
+	words = []string{}
+
+	var word string
+
+	for _, chr := range rawSentence {
+		if !rule.IsWordSeparator(chr) {
+			word = word + string(chr)
+		} else if len(word) > 0 {
+			words = append(words, strings.ToLower(word))
+			word = ""
+		}
+	}
+
+	if len(word) > 0 {
+		words = append(words, strings.ToLower(word))
+	}
+
+	return
 }

@@ -3,23 +3,23 @@ TextRank on Go
 </h1>
 
 <p align="center">
-	<a href="https://godoc.org/github.com/DavidBelicza/TextRank">
-		<img src="https://godoc.org/github.com/DavidBelicza/TextRank?status.svg" alt="GoDoc" />
+	<a href="https://godoc.org/github.com/kaakaa/TextRank">
+		<img src="https://godoc.org/github.com/kaakaa/TextRank?status.svg" alt="GoDoc" />
 	</a>
-	<a href="https://github.com/DavidBelicza/TextRank/blob/master/LICENSE">
+	<a href="https://github.com/kaakaa/TextRank/blob/master/LICENSE">
 		<img src="https://img.shields.io/badge/License-MIT-ee00ee.svg" alt="License: MIT" />
 	</a>
-	<a href="https://travis-ci.org/DavidBelicza/TextRank">
-		<img src="https://travis-ci.org/DavidBelicza/TextRank.svg?branch=master" alt="Build Status" />
+	<a href="https://travis-ci.org/kaakaa/TextRank">
+		<img src="https://travis-ci.org/kaakaa/TextRank.svg?branch=master" alt="Build Status" />
 	</a>
-	<a href="https://goreportcard.com/report/github.com/DavidBelicza/TextRank">
-		<img src="https://goreportcard.com/badge/github.com/DavidBelicza/TextRank" alt="Go Report Card" />
+	<a href="https://goreportcard.com/report/github.com/kaakaa/TextRank">
+		<img src="https://goreportcard.com/badge/github.com/kaakaa/TextRank" alt="Go Report Card" />
 	</a>
-	<a href="https://coveralls.io/github/DavidBelicza/TextRank?branch=master">
-		<img src="https://coveralls.io/repos/github/DavidBelicza/TextRank/badge.svg?branch=master" alt="Coverage Status" />
+	<a href="https://coveralls.io/github/kaakaa/TextRank?branch=master">
+		<img src="https://coveralls.io/repos/github/kaakaa/TextRank/badge.svg?branch=master" alt="Coverage Status" />
 	</a>
-	<a href="https://github.com/DavidBelicza/TextRank/releases/latest">
-		<img src="https://img.shields.io/github/release/DavidBelicza/TextRank.svg?colorB=269aca" alt="Release" />
+	<a href="https://github.com/kaakaa/TextRank/releases/latest">
+		<img src="https://img.shields.io/github/release/kaakaa/TextRank.svg?colorB=269aca" alt="Release" />
 	</a>
 	
 </p>
@@ -57,7 +57,7 @@ The following link *Recona* is a simple, pre-programmed a.i. what uses this libr
 
 You can install TextRank by Go's get:
 
-```go get github.com/DavidBelicza/TextRank```
+```go get github.com/kaakaa/TextRank```
 
 TextRank uses the DEP as vendoring tool, so the required dependencies are versioned under the **vendor** folder. The exact version number defined in the Gopkg.toml. If you want to reinstall the dependencies, use the DEP functions: flush the vendor folder and run:
 
@@ -87,7 +87,7 @@ Stop, start or remove the container:
 
 ## HOW DOES IT WORK
 
-Too see how does it work, the easiest way is to use the sample text. Sample text can be found in the [textrank_test.go file at this line](https://github.com/DavidBelicza/TextRank/blob/master/textrank_test.go#L12). It's a short size text about Gnome Shell.
+Too see how does it work, the easiest way is to use the sample text. Sample text can be found in the [textrank_test.go file at this line](https://github.com/kaakaa/TextRank/blob/master/textrank_test.go#L12). It's a short size text about Gnome Shell.
 
 * TextRank reads the text, 
     * parse it, 
@@ -112,7 +112,7 @@ The **gnome** is the most often used word in this text and **shell** is also use
 
 The following two important phrases have same occurrence 3, however they are not equal. This is because the **extension gnome** phrase contains the word **gnome**, the most popular word in the text, and it increases the phrase's weight. It increases the weight of any word what is related to it, but not too much to overcome other important phrases what don't contain the **gnome** word.
 
-The exact algorithm can be found in the [algorithm.go file at this line](https://github.com/DavidBelicza/TextRank/blob/master/rank/algorithm.go#L65).
+The exact algorithm can be found in the [algorithm.go file at this line](https://github.com/kaakaa/TextRank/blob/master/rank/algorithm.go#L65).
 
 ## TEXTRANK OR AUTOMATIC SUMMARIZATION
 > Automatic summarization is the process of reducing a text document with a computer program in order to create a summary that retains the most important points of the original document. Technologies that can make a coherent summary take into account variables such as length, writing style and syntax. Automatic data summarization is part of machine learning and data mining. The main idea of summarization is to find a representative subset of the data, which contains the information of the entire set. Summarization technologies are used in a large number of sectors in industry today. - Wikipedia
@@ -129,7 +129,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/DavidBelicza/TextRank"
+	"github.com/kaakaa/TextRank"
 )
 
 func main() {
@@ -168,7 +168,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/DavidBelicza/TextRank"
+	"github.com/kaakaa/TextRank"
 )
 
 func main() {
@@ -229,7 +229,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/DavidBelicza/TextRank"
+	"github.com/kaakaa/TextRank"
 )
 
 func main() {
@@ -279,7 +279,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/DavidBelicza/TextRank"
+	"github.com/kaakaa/TextRank"
 )
 
 func main() {
@@ -328,7 +328,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/DavidBelicza/TextRank"
+	"github.com/kaakaa/TextRank"
 )
 
 func main() {
@@ -367,7 +367,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/DavidBelicza/TextRank"
+	"github.com/kaakaa/TextRank"
 )
 
 func main() {
@@ -425,7 +425,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/DavidBelicza/TextRank"
+	"github.com/kaakaa/TextRank"
 )
 
 func main() {
@@ -471,7 +471,7 @@ import (
 	"fmt"
 	"time"
 	
-	"github.com/DavidBelicza/TextRank"
+	"github.com/kaakaa/TextRank"
 )
 
 func main() {
