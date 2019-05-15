@@ -12,7 +12,7 @@ type JapaneseRule struct {
 func NewJapaneseRule() *JapaneseRule {
 	return &JapaneseRule{
 		t:                  tokenizer.New(),
-		sentenceSeparators: []string{"。", ".", "！", "!", "？", "?"},
+		sentenceSeparators: []string{"。", "！", "!", "？", "?"},
 	}
 }
 
